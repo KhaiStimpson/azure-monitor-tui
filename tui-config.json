@@ -1,0 +1,574 @@
+{
+  "$schema": "https://gui-cs.github.io/Terminal.Gui/schemas/tui-config-schema.json",
+  "Themes": [
+    {
+      "Tokyo Night": {
+        "Dialog.DefaultButtonAlignment": "Center",
+        "Dialog.DefaultBorderStyle": "Rounded",
+        "Dialog.DefaultShadow": "None",
+        "FrameView.DefaultBorderStyle": "Rounded",
+        "Window.DefaultBorderStyle": "None",
+        "MessageBox.DefaultButtonAlignment": "Center",
+        "MessageBox.DefaultBorderStyle": "Rounded",
+        "Button.DefaultShadow": "None",
+        "Schemes": [
+          {
+            "TopLevel": {
+              "Normal": {
+                "Foreground": "#c0caf5",
+                "Background": "#1a1b26",
+                "Style": "None"
+              },
+              "Focus": {
+                "Foreground": "#c0caf5",
+                "Background": "#292e42",
+                "Style": "None"
+              },
+              "HotNormal": {
+                "Foreground": "#bb9af7",
+                "Background": "#1a1b26",
+                "Style": "Underline"
+              },
+              "HotFocus": {
+                "Foreground": "#bb9af7",
+                "Background": "#292e42",
+                "Style": "Underline"
+              },
+              "Disabled": {
+                "Foreground": "#545c7e",
+                "Background": "#1a1b26",
+                "Style": "Faint"
+              },
+              "Active": {
+                "Foreground": "#7aa2f7",
+                "Background": "#1a1b26",
+                "Style": "Bold"
+              },
+              "HotActive": {
+                "Foreground": "#bb9af7",
+                "Background": "#1a1b26",
+                "Style": "Bold,Underline"
+              },
+              "Highlight": {
+                "Foreground": "#16161e",
+                "Background": "#7dcfff",
+                "Style": "None"
+              },
+              "Editable": {
+                "Foreground": "#c0caf5",
+                "Background": "#16161e",
+                "Style": "None"
+              },
+              "ReadOnly": {
+                "Foreground": "#565f89",
+                "Background": "#1a1b26",
+                "Style": "Italic"
+              }
+            }
+          },
+          {
+            "Base": {
+              "Normal": {
+                "Foreground": "#c0caf5",
+                "Background": "#16161e",
+                "Style": "None"
+              },
+              "Focus": {
+                "Foreground": "#c0caf5",
+                "Background": "#292e42",
+                "Style": "None"
+              },
+              "HotNormal": {
+                "Foreground": "#bb9af7",
+                "Background": "#16161e",
+                "Style": "Underline"
+              },
+              "HotFocus": {
+                "Foreground": "#bb9af7",
+                "Background": "#292e42",
+                "Style": "Underline"
+              },
+              "Disabled": {
+                "Foreground": "#545c7e",
+                "Background": "#16161e",
+                "Style": "Faint"
+              },
+              "Active": {
+                "Foreground": "#7aa2f7",
+                "Background": "#16161e",
+                "Style": "Bold"
+              },
+              "HotActive": {
+                "Foreground": "#bb9af7",
+                "Background": "#16161e",
+                "Style": "Bold,Underline"
+              },
+              "Highlight": {
+                "Foreground": "#16161e",
+                "Background": "#7dcfff",
+                "Style": "None"
+              },
+              "Editable": {
+                "Foreground": "#e0af68",
+                "Background": "#1a1b26",
+                "Style": "None"
+              },
+              "ReadOnly": {
+                "Foreground": "#565f89",
+                "Background": "#16161e",
+                "Style": "Italic"
+              }
+            }
+          },
+          {
+            "Dialog": {
+              "Normal": {
+                "Foreground": "#c0caf5",
+                "Background": "#292e42",
+                "Style": "None"
+              },
+              "Focus": {
+                "Foreground": "#c0caf5",
+                "Background": "#1a1b26",
+                "Style": "None"
+              },
+              "HotNormal": {
+                "Foreground": "#bb9af7",
+                "Background": "#292e42",
+                "Style": "Underline"
+              },
+              "HotFocus": {
+                "Foreground": "#bb9af7",
+                "Background": "#1a1b26",
+                "Style": "Underline"
+              },
+              "Disabled": {
+                "Foreground": "#545c7e",
+                "Background": "#292e42",
+                "Style": "Faint"
+              },
+              "Active": {
+                "Foreground": "#7aa2f7",
+                "Background": "#292e42",
+                "Style": "Bold"
+              },
+              "HotActive": {
+                "Foreground": "#bb9af7",
+                "Background": "#292e42",
+                "Style": "Bold,Underline"
+              },
+              "Highlight": {
+                "Foreground": "#1a1b26",
+                "Background": "#7dcfff",
+                "Style": "None"
+              },
+              "Editable": {
+                "Foreground": "#e0af68",
+                "Background": "#1a1b26",
+                "Style": "None"
+              },
+              "ReadOnly": {
+                "Foreground": "#565f89",
+                "Background": "#292e42",
+                "Style": "Italic"
+              }
+            }
+          },
+          {
+            "Menu": {
+              "Normal": {
+                "Foreground": "#c0caf5",
+                "Background": "#16161e",
+                "Style": "None"
+              },
+              "Focus": {
+                "Foreground": "#1a1b26",
+                "Background": "#7aa2f7",
+                "Style": "Bold"
+              },
+              "HotNormal": {
+                "Foreground": "#bb9af7",
+                "Background": "#16161e",
+                "Style": "Underline"
+              },
+              "HotFocus": {
+                "Foreground": "#1a1b26",
+                "Background": "#7aa2f7",
+                "Style": "Bold,Underline"
+              },
+              "Disabled": {
+                "Foreground": "#545c7e",
+                "Background": "#16161e",
+                "Style": "Faint"
+              },
+              "Active": {
+                "Foreground": "#7aa2f7",
+                "Background": "#16161e",
+                "Style": "Bold"
+              },
+              "HotActive": {
+                "Foreground": "#bb9af7",
+                "Background": "#16161e",
+                "Style": "Bold,Underline"
+              },
+              "Highlight": {
+                "Foreground": "#1a1b26",
+                "Background": "#7dcfff",
+                "Style": "None"
+              },
+              "Editable": {
+                "Foreground": "#e0af68",
+                "Background": "#1a1b26",
+                "Style": "None"
+              },
+              "ReadOnly": {
+                "Foreground": "#565f89",
+                "Background": "#16161e",
+                "Style": "Italic"
+              }
+            }
+          },
+          {
+            "Error": {
+              "Normal": {
+                "Foreground": "#f7768e",
+                "Background": "#1a1b26",
+                "Style": "Bold"
+              },
+              "Focus": {
+                "Foreground": "#f7768e",
+                "Background": "#292e42",
+                "Style": "Bold"
+              },
+              "HotNormal": {
+                "Foreground": "#ff9e64",
+                "Background": "#1a1b26",
+                "Style": "Bold,Underline"
+              },
+              "HotFocus": {
+                "Foreground": "#ff9e64",
+                "Background": "#292e42",
+                "Style": "Bold,Underline"
+              },
+              "Disabled": {
+                "Foreground": "#545c7e",
+                "Background": "#1a1b26",
+                "Style": "Faint"
+              },
+              "Active": {
+                "Foreground": "#f7768e",
+                "Background": "#1a1b26",
+                "Style": "Bold"
+              },
+              "HotActive": {
+                "Foreground": "#ff9e64",
+                "Background": "#1a1b26",
+                "Style": "Bold,Underline"
+              },
+              "Highlight": {
+                "Foreground": "#1a1b26",
+                "Background": "#f7768e",
+                "Style": "None"
+              },
+              "Editable": {
+                "Foreground": "#e0af68",
+                "Background": "#1a1b26",
+                "Style": "None"
+              },
+              "ReadOnly": {
+                "Foreground": "#565f89",
+                "Background": "#1a1b26",
+                "Style": "Italic"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Rose Pine": {
+        "Dialog.DefaultButtonAlignment": "Center",
+        "Dialog.DefaultBorderStyle": "Rounded",
+        "Dialog.DefaultShadow": "None",
+        "FrameView.DefaultBorderStyle": "Rounded",
+        "Window.DefaultBorderStyle": "None",
+        "MessageBox.DefaultButtonAlignment": "Center",
+        "MessageBox.DefaultBorderStyle": "Rounded",
+        "Button.DefaultShadow": "None",
+        "Schemes": [
+          {
+            "TopLevel": {
+              "Normal": {
+                "Foreground": "#e0def4",
+                "Background": "#191724",
+                "Style": "None"
+              },
+              "Focus": {
+                "Foreground": "#e0def4",
+                "Background": "#26233a",
+                "Style": "None"
+              },
+              "HotNormal": {
+                "Foreground": "#c4a7e7",
+                "Background": "#191724",
+                "Style": "Underline"
+              },
+              "HotFocus": {
+                "Foreground": "#c4a7e7",
+                "Background": "#26233a",
+                "Style": "Underline"
+              },
+              "Disabled": {
+                "Foreground": "#6e6a86",
+                "Background": "#191724",
+                "Style": "Faint"
+              },
+              "Active": {
+                "Foreground": "#31748f",
+                "Background": "#191724",
+                "Style": "Bold"
+              },
+              "HotActive": {
+                "Foreground": "#c4a7e7",
+                "Background": "#191724",
+                "Style": "Bold,Underline"
+              },
+              "Highlight": {
+                "Foreground": "#191724",
+                "Background": "#9ccfd8",
+                "Style": "None"
+              },
+              "Editable": {
+                "Foreground": "#e0def4",
+                "Background": "#1f1d2e",
+                "Style": "None"
+              },
+              "ReadOnly": {
+                "Foreground": "#908caa",
+                "Background": "#191724",
+                "Style": "Italic"
+              }
+            }
+          },
+          {
+            "Base": {
+              "Normal": {
+                "Foreground": "#e0def4",
+                "Background": "#1f1d2e",
+                "Style": "None"
+              },
+              "Focus": {
+                "Foreground": "#e0def4",
+                "Background": "#26233a",
+                "Style": "None"
+              },
+              "HotNormal": {
+                "Foreground": "#c4a7e7",
+                "Background": "#1f1d2e",
+                "Style": "Underline"
+              },
+              "HotFocus": {
+                "Foreground": "#c4a7e7",
+                "Background": "#26233a",
+                "Style": "Underline"
+              },
+              "Disabled": {
+                "Foreground": "#6e6a86",
+                "Background": "#1f1d2e",
+                "Style": "Faint"
+              },
+              "Active": {
+                "Foreground": "#31748f",
+                "Background": "#1f1d2e",
+                "Style": "Bold"
+              },
+              "HotActive": {
+                "Foreground": "#c4a7e7",
+                "Background": "#1f1d2e",
+                "Style": "Bold,Underline"
+              },
+              "Highlight": {
+                "Foreground": "#191724",
+                "Background": "#9ccfd8",
+                "Style": "None"
+              },
+              "Editable": {
+                "Foreground": "#f6c177",
+                "Background": "#191724",
+                "Style": "None"
+              },
+              "ReadOnly": {
+                "Foreground": "#908caa",
+                "Background": "#1f1d2e",
+                "Style": "Italic"
+              }
+            }
+          },
+          {
+            "Dialog": {
+              "Normal": {
+                "Foreground": "#e0def4",
+                "Background": "#26233a",
+                "Style": "None"
+              },
+              "Focus": {
+                "Foreground": "#e0def4",
+                "Background": "#191724",
+                "Style": "None"
+              },
+              "HotNormal": {
+                "Foreground": "#c4a7e7",
+                "Background": "#26233a",
+                "Style": "Underline"
+              },
+              "HotFocus": {
+                "Foreground": "#c4a7e7",
+                "Background": "#191724",
+                "Style": "Underline"
+              },
+              "Disabled": {
+                "Foreground": "#6e6a86",
+                "Background": "#26233a",
+                "Style": "Faint"
+              },
+              "Active": {
+                "Foreground": "#31748f",
+                "Background": "#26233a",
+                "Style": "Bold"
+              },
+              "HotActive": {
+                "Foreground": "#c4a7e7",
+                "Background": "#26233a",
+                "Style": "Bold,Underline"
+              },
+              "Highlight": {
+                "Foreground": "#191724",
+                "Background": "#9ccfd8",
+                "Style": "None"
+              },
+              "Editable": {
+                "Foreground": "#f6c177",
+                "Background": "#191724",
+                "Style": "None"
+              },
+              "ReadOnly": {
+                "Foreground": "#908caa",
+                "Background": "#26233a",
+                "Style": "Italic"
+              }
+            }
+          },
+          {
+            "Menu": {
+              "Normal": {
+                "Foreground": "#e0def4",
+                "Background": "#1f1d2e",
+                "Style": "None"
+              },
+              "Focus": {
+                "Foreground": "#191724",
+                "Background": "#31748f",
+                "Style": "Bold"
+              },
+              "HotNormal": {
+                "Foreground": "#c4a7e7",
+                "Background": "#1f1d2e",
+                "Style": "Underline"
+              },
+              "HotFocus": {
+                "Foreground": "#191724",
+                "Background": "#31748f",
+                "Style": "Bold,Underline"
+              },
+              "Disabled": {
+                "Foreground": "#6e6a86",
+                "Background": "#1f1d2e",
+                "Style": "Faint"
+              },
+              "Active": {
+                "Foreground": "#31748f",
+                "Background": "#1f1d2e",
+                "Style": "Bold"
+              },
+              "HotActive": {
+                "Foreground": "#c4a7e7",
+                "Background": "#1f1d2e",
+                "Style": "Bold,Underline"
+              },
+              "Highlight": {
+                "Foreground": "#191724",
+                "Background": "#9ccfd8",
+                "Style": "None"
+              },
+              "Editable": {
+                "Foreground": "#f6c177",
+                "Background": "#191724",
+                "Style": "None"
+              },
+              "ReadOnly": {
+                "Foreground": "#908caa",
+                "Background": "#1f1d2e",
+                "Style": "Italic"
+              }
+            }
+          },
+          {
+            "Error": {
+              "Normal": {
+                "Foreground": "#eb6f92",
+                "Background": "#191724",
+                "Style": "Bold"
+              },
+              "Focus": {
+                "Foreground": "#eb6f92",
+                "Background": "#26233a",
+                "Style": "Bold"
+              },
+              "HotNormal": {
+                "Foreground": "#ebbcba",
+                "Background": "#191724",
+                "Style": "Bold,Underline"
+              },
+              "HotFocus": {
+                "Foreground": "#ebbcba",
+                "Background": "#26233a",
+                "Style": "Bold,Underline"
+              },
+              "Disabled": {
+                "Foreground": "#6e6a86",
+                "Background": "#191724",
+                "Style": "Faint"
+              },
+              "Active": {
+                "Foreground": "#eb6f92",
+                "Background": "#191724",
+                "Style": "Bold"
+              },
+              "HotActive": {
+                "Foreground": "#ebbcba",
+                "Background": "#191724",
+                "Style": "Bold,Underline"
+              },
+              "Highlight": {
+                "Foreground": "#191724",
+                "Background": "#eb6f92",
+                "Style": "None"
+              },
+              "Editable": {
+                "Foreground": "#f6c177",
+                "Background": "#191724",
+                "Style": "None"
+              },
+              "ReadOnly": {
+                "Foreground": "#908caa",
+                "Background": "#191724",
+                "Style": "Italic"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Theme": "Tokyo Night"
+}
