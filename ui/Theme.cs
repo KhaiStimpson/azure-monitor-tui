@@ -13,33 +13,37 @@ namespace AzureMonitorTui.Ui;
 /// </summary>
 public static class ThemeLoader
 {
-    private static readonly string UserConfigPath = Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
-        ".config",
-        "azure-monitor-tui.json");
-
-    private static readonly string LocalConfigPath = Path.Combine(
-        AppContext.BaseDirectory,
-        "tui-config.json");
+    private const string ThemeFileName = "tui-config.json";
 
     /// <summary>
-    /// Loads theme configuration from ~/.config/azure-monitor-tui.json if it exists,
-    /// otherwise falls back to tui-config.json in the application directory.
-    /// Enables ConfigurationManager with the loaded config.
+    /// Loads theme configuration. In Release builds, checks
+    /// ~/.config/az-monitor/tui-config.json first, then falls back to the bundled file.
+    /// In Debug builds, uses tui-config.json from the working directory.
     /// </summary>
     public static void Load()
     {
         string? configPath = null;
 
-        // Try user config first
-        if (File.Exists(UserConfigPath))
+        if (ConfigPaths.UseUserOverrides)
         {
-            configPath = UserConfigPath;
+            // Release: prefer user override, fall back to bundled
+            var userPath = ConfigPaths.GetUserConfigPath(ThemeFileName);
+
+            if (File.Exists(userPath))
+            {
+                configPath = userPath;
+            }
         }
-        // Fall back to local config
-        else if (File.Exists(LocalConfigPath))
+
+        // Fall back to bundled / local dev config
+        if (configPath is null)
         {
-            configPath = LocalConfigPath;
+            var localPath = ConfigPaths.GetLocalPath(ThemeFileName);
+
+            if (File.Exists(localPath))
+            {
+                configPath = localPath;
+            }
         }
 
         if (configPath is not null)

@@ -12,4 +12,6 @@ public sealed class MonitorSettings
     public int MaxDataPoints { get; set; } = 200;
 
     public bool ShowDebugErrors { get; set; } = false;
+
+    public bool EnableTestMonitor { get; set; } = false;
 }

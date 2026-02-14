@@ -9,15 +9,26 @@ using Terminal.Gui.Input;
 using Terminal.Gui.ViewBase;
 using Terminal.Gui.Views;
 
+using AzureMonitorTui;
 using AzureMonitorTui.Monitors;
 using AzureMonitorTui.Ui;
 
 // ── Configuration ────────────────────────────────────────────────────────────
 
-var configuration = new ConfigurationBuilder()
-    .SetBasePath(AppContext.BaseDirectory)
-    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: false)
-    .Build();
+var configurationBuilder = new ConfigurationBuilder()
+    .SetBasePath(ConfigPaths.BaseConfigDirectory)
+    .AddJsonFile(ConfigPaths.GetLocalPath("appsettings.json"), optional: false, reloadOnChange: false);
+
+// In Release builds, layer user config on top of bundled defaults
+if (ConfigPaths.UseUserOverrides)
+{
+    configurationBuilder.AddJsonFile(
+        ConfigPaths.GetUserConfigPath("config.json"),
+        optional: true,
+        reloadOnChange: false);
+}
+
+var configuration = configurationBuilder.Build();
 
 var azureConfig = new AzureStorageConfig();
 configuration.GetSection("AzureStorage").Bind(azureConfig);
@@ -27,7 +38,7 @@ configuration.GetSection("Monitor").Bind(monitorSettings);
 
 if (string.IsNullOrWhiteSpace(azureConfig.ConnectionString))
 {
-    Console.Error.WriteLine("Error: AzureStorage:ConnectionString is not configured in appsettings.json");
+    Console.Error.WriteLine("Error: AzureStorage:ConnectionString is not configured.");
     return 1;
 }
 
@@ -198,13 +209,16 @@ statusBar.Add(quitShortcut, refreshShortcut, themeShortcut);
 window.Add(header, headerSeparator, leftPane, rightPane, statusBar);
 
 // ── Test monitor for graph testing ──────────────────────────────────────────
-// Add a test monitor after UI initializes so we can verify the graph works
-window.Initialized += (_, _) =>
+// Add a test monitor after UI initializes when enabled in config
+if (monitorSettings.EnableTestMonitor)
 {
-    var testMonitor = new TestMonitor();
-    activeMonitors.TryAdd("test-queue", testMonitor);
-    dashboard.AddMonitor("test-queue", testMonitor);
-};
+    window.Initialized += (_, _) =>
+    {
+        var testMonitor = new TestMonitor();
+        activeMonitors.TryAdd("test-queue", testMonitor);
+        dashboard.AddMonitor("test-queue", testMonitor);
+    };
+}
 
 // ── Background initialization ────────────────────────────────────────────────
 // Load Azure connection and catalog data in background after TUI is shown
