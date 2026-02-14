@@ -86,10 +86,10 @@ var headerSeparator = new Line
 // Left pane: catalog tree
 var leftPane = new FrameView
 {
-    Title = "Catalogs",
+    Title = "Catalog",
     X = 0,
     Y = 2,
-    Width = Dim.Percent(25),
+    Width = Dim.Percent(35),
     Height = Dim.Fill(1),
     BorderStyle = LineStyle.Rounded
 };
