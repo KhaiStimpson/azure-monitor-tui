@@ -1,5 +1,7 @@
 # Azure Monitor TUI
 
+![Proudly Vibe Coded - Midnight Glow](https://vibecoded.fyi/badges/for-the-badge/main/proudly-vibe-coded-midnight-glow.svg)
+
 A Terminal User Interface (TUI) application for monitoring Azure Queue Storage built with .NET 10 and Terminal.Gui v2.
 
 ## Overview
